@@ -1,22 +1,113 @@
 @import "tailwindcss";
+/*Обовязково потрібно вказати щоб Tailwind розумів клас .dark від next-themes*/
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  /*КОЛОРИ*/
+  /*Фон*/
+  --background: #f4ecec;
+  --muted-background: #e1d7cd;
+  --card-background: #f6c49f;
+  --card-item-background: #edc4a5;
+  --form-background: #c49bdd;
+  --input-background: #f5e4fb;
+  --input-focus-background: #f7f0fb;
+  --button-background: #aab8fb;
+  --button-hover-background: #bbc6fd;
+  --header-background: #dd8b8b;
+  --header-hover-background: #eaa7a7;
+  --footer-background: #dd8bb9;
+  --footer-hover-background: #efadd2;
+  --sidebar-background: #ecd2b8;
+  --sidebar-hover-background: #f6e3cf;
+  /*Текст*/
   --foreground: #171717;
+  --error-foreground: #ff0000;
+  --card-foreground: #171717;
+  --form-foreground: #171717;
+  --input-foreground: #171717;
+  --button-foreground: #171717;
+  --header-foreground: #171717;
+  --footer-foreground: #171717;
+  --sidebar-foreground: #171717;
+  /*Рамка*/
+  --border: #232225;
+
+  /*ЗКРУГЛЕННЯ*/
+  --radius: 0.5rem;
+}
+
+.dark {
+  /*КОЛОРИ*/
+  /*Фон*/
+  --background: #0a0a0a;
+  --muted-background: #171616;
+  --card-background: #372c26;
+  --card-item-background: #473730;
+  --form-background: #4c335a;
+  --input-background: #56475e;
+  --input-focus-background: #5a4a63;
+  --button-background: #3b4471;
+  --button-hover-background: #373e63;
+  --header-background: #201212;
+  --header-hover-background: #2c1a1a;
+  --footer-background: #371c2b;
+  --footer-hover-background: #513043;
+  --sidebar-background: #392f25;
+  --sidebar-hover-background: #50463a;
+
+  /*Текст*/
+  --foreground: #f4ecec;
+  --error-foreground: #ff0000;
+  --card-foreground: #f4ecec;
+  --form-foreground: #f4ecec;
+  --input-foreground: #f4ecec;
+  --button-foreground: #f4ecec;
+  --header-foreground: #f4ecec;
+  --footer-foreground: #f4ecec;
+  --sidebar-foreground: #f4ecec;
+
+  /*Рамка*/
+  --border: #ada9b6;
 }
 
 @theme inline {
+  /*КОЛЬОРИ*/
+  /*Фон*/
   --color-background: var(--background);
+  --color-muted-background: var(--muted-background);
+  --color-card-background: var(--card-background);
+  --color-card-item-background: var(--card-item-background);
+  --color-form-background: var(--form-background);
+  --color-input-background: var(--input-background);
+  --color-input-focus-background: var(--input-focus-background);
+  --color-button-background: var(--button-background);
+  --color-button-hover-background: var(--button-hover-background);
+  --color-header-background: var(--header-background);
+  --color-header-hover-background: var(--header-hover-background);
+  --color-footer-background: var(--footer-background);
+  --color-footer-hover-background: var(--footer-hover-background);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-hover-background: var(--sidebar-hover-background);
+  /*Текст*/
   --color-foreground: var(--foreground);
+  --color-error-foreground: var(--error-foreground);
+  --color-card-foreground: var(--card-foreground);
+  --color-form-foreground: var(--form-foreground);
+  --color-input-foreground: var(--input-foreground);
+  --color-button-foreground: var(--button-foreground);
+  --color-header-foreground: var(--header-foreground);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  /*Рамка*/
+  --color-border: var(--border);
+
+  /*ЗКРУГЛЕННЯ*/
+  --radius-custom: var(--radius);
+
+  /*ШРИФТИ*/
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -24,3 +115,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+ */
+
+
+
